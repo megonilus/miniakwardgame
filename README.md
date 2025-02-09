@@ -1,1 +1,2 @@
 # miniakwardgame
+just game
