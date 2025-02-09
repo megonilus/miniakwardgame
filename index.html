@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knighost</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    html {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 100%;
+      min-height: 100vh;
+      background: #181818;
+      position: relative;
+    }
+    canvas {
+      background: url("./assets/bg.jpg") repeat;
+      border: 1px solid whitesmoke;
+    }
+    div.stats {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+    div.info {
+      width: 1200px;
+      height: auto;
+      word-wrap: break-word;
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    div p {
+      color: #fdfdfd;
+    }
+    #hp {
+      color: green;
+      font-weight: bold;
+      letter-spacing: 10px;
+    }
+  </style>
+  <body>
+    <div class="stats">
+      <p>Ваше хп: <span id="hp"></span></p>
+      <p>Ваша скорость: <span id="speed"></span></p>
+      <p>Объектов на экране: <span id="objects-counter"></span></p>
+    </div>
+    <div class="info">
+      <p>
+        Информация: куб - замедляет, стрела замедляет и отнимает хп, ящик -
+        просто отнимает хп. Для движения можно использовать WASD.
+      </p>
+    </div>
+    <canvas id="canvas" width="1200" height="700"></canvas>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
